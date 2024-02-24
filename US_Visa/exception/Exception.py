@@ -1,7 +1,6 @@
 import logging
 import os
 import sys
-from US_Visa.logger import Logging
 import Exception
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
