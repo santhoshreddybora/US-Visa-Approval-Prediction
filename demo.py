@@ -1,10 +1,9 @@
 from US_Visa.logger import logging
 from US_Visa.exception import CustomException
 import sys 
-
+from US_Visa.pipeline.training_pipeline import TrainPipeline
 try :
-    s=1/'0'
-    logging.info('Exception testing')
+    pipeline=TrainPipeline()
+    pipeline.run_pipeline()
 except Exception as e:
-    logging.info(e)
-    raise CustomException(e,sys)  
+    raise CustomException(e,sys)
