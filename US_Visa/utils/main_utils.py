@@ -76,7 +76,7 @@ def save_object(filepath:str,obj:object)->None:
 
     try :
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        with open(filepath,'rb') as f:
+        with open(filepath,'wb') as f:
             dill.dump(obj,f)
         logging.info("dumped the object into filepath ")
     except Exception as e:
